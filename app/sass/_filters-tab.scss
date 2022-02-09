@@ -1,0 +1,84 @@
+.filters-tab {
+  background: #fff;
+  box-shadow: 0px 15px 25px -5px rgba(91, 164, 164, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  border-radius: 0.5rem;
+  height: 0;
+  display: none;
+
+  .filters-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .filter {
+      display: flex;
+      align-items: center;
+      background: $Light-Grayish-Cyan2;
+      border-radius: 0.25rem;
+      overflow: hidden;
+
+      span {
+        color: $Desaturated-Dark-Cyan;
+        font-weight: 700;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  button.clear-filters-btn {
+    background: none;
+    border: none;
+    transition: $t1;
+    color: $Dark-Grayish-Cyan;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+    font-family: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      margin-top: 0.5rem;
+      opacity: 0;
+      background: currentColor;
+      height: 1px;
+      transition: inherit;
+    }
+
+    &:hover {
+      color: $Desaturated-Dark-Cyan;
+
+      &::after {
+        opacity: 1;
+        margin-top: 0;
+      }
+    }
+  }
+
+  button.remove-filter-btn {
+    height: 100%;
+    width: 2rem;
+    transition: $t1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $Desaturated-Dark-Cyan;
+    border: none;
+    cursor: pointer;
+    img {
+      pointer-events: none;
+    }
+
+    &:hover {
+      background: $Very-Dark-Grayish-Cyan;
+    }
+  }
+}

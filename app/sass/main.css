@@ -1,0 +1,531 @@
+.skeleton-job > .company-avatar {
+  height: 4rem;
+  width: 4rem;
+  max-width: auto;
+  border-radius: 50%;
+  background: silver;
+  -webkit-animation: skeleton-anim 2s linear infinite alternate;
+          animation: skeleton-anim 2s linear infinite alternate;
+  pointer-events: none;
+}
+
+.skeleton-job .job-info .company-avatar {
+  height: 6rem;
+  width: 6rem;
+  max-width: auto;
+  border-radius: 50%;
+  background: silver;
+  -webkit-animation: skeleton-anim 2s linear infinite alternate;
+          animation: skeleton-anim 2s linear infinite alternate;
+  pointer-events: none;
+}
+
+.skeleton-job .job-info .job-info-inner .top {
+  height: 2rem;
+  width: 40vw;
+  max-width: 100px;
+  border-radius: 0.5rem;
+  background: silver;
+  -webkit-animation: skeleton-anim 2s linear infinite alternate;
+          animation: skeleton-anim 2s linear infinite alternate;
+  pointer-events: none;
+}
+
+.skeleton-job .job-info .job-info-inner .job-title {
+  height: 2rem;
+  width: 60vw;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  background: silver;
+  -webkit-animation: skeleton-anim 2s linear infinite alternate;
+          animation: skeleton-anim 2s linear infinite alternate;
+  pointer-events: none;
+}
+
+.skeleton-job .job-info .job-info-inner .bottom {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skeleton-job .job-info .job-info-inner .bottom .rect {
+  height: 2rem;
+  width: 20vw;
+  max-width: 4rem;
+  border-radius: 0.5rem;
+  background: silver;
+  -webkit-animation: skeleton-anim 2s linear infinite alternate;
+          animation: skeleton-anim 2s linear infinite alternate;
+  pointer-events: none;
+}
+
+.skeleton-job .job-info .job-info-inner .bottom .circle {
+  height: 0.25rem;
+  width: 0.25rem;
+  max-width: auto;
+  border-radius: 50%;
+  background: silver;
+  -webkit-animation: skeleton-anim 2s linear infinite alternate;
+          animation: skeleton-anim 2s linear infinite alternate;
+  pointer-events: none;
+}
+
+.skeleton-job .rects {
+  border-top: 1px solid silver !important;
+  width: auto !important;
+}
+
+.skeleton-job .rects .rect {
+  height: 2rem;
+  width: 20vw;
+  max-width: 4rem;
+  border-radius: 0.5rem;
+  background: silver;
+  -webkit-animation: skeleton-anim 2s linear infinite alternate;
+          animation: skeleton-anim 2s linear infinite alternate;
+  pointer-events: none;
+}
+
+@-webkit-keyframes skeleton-anim {
+  to {
+    background: #ebebeb;
+  }
+}
+
+@keyframes skeleton-anim {
+  to {
+    background: #ebebeb;
+  }
+}
+
+.filters-tab {
+  background: #fff;
+  -webkit-box-shadow: 0px 15px 25px -5px rgba(91, 164, 164, 0.5);
+          box-shadow: 0px 15px 25px -5px rgba(91, 164, 164, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  padding: 0;
+  border-radius: 0.5rem;
+  height: 0;
+  display: none;
+}
+
+.filters-tab .filters-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filters-tab .filters-flex .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #eef6f6;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.filters-tab .filters-flex .filter span {
+  color: #5ba4a4;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.filters-tab button.clear-filters-btn {
+  background: none;
+  border: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #7b8e8e;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  position: relative;
+  font-family: inherit;
+}
+
+.filters-tab button.clear-filters-btn::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  opacity: 0;
+  background: currentColor;
+  height: 1px;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+.filters-tab button.clear-filters-btn:hover {
+  color: #5ba4a4;
+}
+
+.filters-tab button.clear-filters-btn:hover::after {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.filters-tab button.remove-filter-btn {
+  height: 100%;
+  width: 2rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5ba4a4;
+  border: none;
+  cursor: pointer;
+}
+
+.filters-tab button.remove-filter-btn img {
+  pointer-events: none;
+}
+
+.filters-tab button.remove-filter-btn:hover {
+  background: #2c3a3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+  background: #effafa;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+.desk-img {
+  display: none;
+}
+
+.header-img {
+  background: #5ba4a4;
+  position: relative;
+  width: 100%;
+}
+
+.header-img > img {
+  width: 100%;
+  vertical-align: bottom;
+  pointer-events: none;
+}
+
+.jobs-main-container {
+  margin: 4rem 0;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.featured::before {
+  content: "";
+  height: 100%;
+  width: 0.25rem;
+  position: absolute;
+  left: 0;
+  background: #5ba4a4;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.featured .job-info .job-info-inner .top .featured-notifier {
+  display: block;
+}
+
+.new .job-info .job-info-inner .top .new-notifier {
+  display: block;
+}
+
+.job {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 15px 25px -5px rgba(91, 164, 164, 0.5);
+          box-shadow: 0px 15px 25px -5px rgba(91, 164, 164, 0.5);
+  gap: 1rem;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.job > .company-avatar {
+  height: 4rem;
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: -2rem;
+  left: 5%;
+}
+
+.job > .company-avatar img {
+  width: 100%;
+}
+
+.job .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid #7b8e8e;
+}
+
+.job .tags .tag {
+  background: #eef6f6;
+  color: #5ba4a4;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.job .tags .tag:hover {
+  background: #5ba4a4;
+  color: #fff;
+}
+
+.job-inner {
+  margin: 3rem 2rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.job-info {
+  position: relative;
+}
+
+.job-info .job-info-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+}
+
+.job-info .job-info-inner .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.job-info .job-info-inner .top .company-name {
+  color: #5ba4a4;
+  font-weight: 700;
+}
+
+.job-info .job-info-inner .top .new-notifier {
+  display: none;
+  font-size: 0.75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: #5ba4a4;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  border-radius: 5rem;
+}
+
+.job-info .job-info-inner .top .featured-notifier {
+  display: none;
+  font-size: 0.75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: #2c3a3a;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  border-radius: 5rem;
+}
+
+.job-info .job-info-inner .job-title {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.job-info .job-info-inner .job-title:hover {
+  color: #5ba4a4;
+  font-weight: 700;
+}
+
+.job-info .job-info-inner .bottom {
+  color: #7b8e8e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.job-info .job-info-inner .bottom .cooperation-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.job-info .job-info-inner .bottom .cooperation-type::before, .job-info .job-info-inner .bottom .cooperation-type::after {
+  content: "";
+  display: inline-block;
+  height: 0.25rem;
+  width: 0.25rem;
+  border-radius: 50%;
+  background: #7b8e8e;
+}
+
+@media (min-width: 768px) {
+  .desk-img {
+    display: block;
+  }
+  .mob-img {
+    display: none;
+  }
+  .job-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 2rem;
+  }
+  .job .tags {
+    border-top: none !important;
+    padding-top: 0;
+    width: 30%;
+  }
+  .job-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2vw;
+  }
+  .job-info .job-info-inner .top .new-notifier {
+    padding: 0.3rem;
+  }
+  .job-info .job-info-inner .job-title {
+    font-size: 1.25rem;
+  }
+  .job-info .job-info-inner .bottom {
+    gap: 1rem;
+  }
+  .job-info .job-info-inner .bottom .cooperation-type {
+    gap: 1rem;
+  }
+  .job-info > .company-avatar {
+    height: 100%;
+  }
+  .job-info > .company-avatar img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 970px) {
+  .jobs-main-container {
+    width: 80%;
+  }
+  .job .tags {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1270px) {
+  .job .tags {
+    width: auto;
+  }
+}
+/*# sourceMappingURL=main.css.map */

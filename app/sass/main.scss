@@ -1,0 +1,259 @@
+@import "./variables";
+@import "./mixins";
+@import "./skeleton";
+@import "./filters-tab";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: $main-font;
+  background: $Light-Grayish-Cyan1;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+.desk-img {
+  display: none;
+}
+
+.header-img {
+  background: $Desaturated-Dark-Cyan;
+  position: relative;
+  width: 100%;
+
+  > img {
+    width: 100%;
+    vertical-align: bottom;
+    pointer-events: none;
+  }
+}
+
+.jobs-main-container {
+  margin: 4rem 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.featured {
+  &::before {
+    content: "";
+    height: 100%;
+    width: 0.25rem;
+    position: absolute;
+    left: 0;
+    background: $Desaturated-Dark-Cyan;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .job-info .job-info-inner .top .featured-notifier {
+    display: block;
+  }
+}
+
+.new {
+  .job-info .job-info-inner .top .new-notifier {
+    display: block;
+  }
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 15px 25px -5px rgba(91, 164, 164, 0.5);
+  gap: 1rem;
+  position: relative;
+  transition: $t1;
+
+  > .company-avatar {
+    height: 4rem;
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: -2rem;
+    left: 5%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 1px solid $Dark-Grayish-Cyan;
+
+    .tag {
+      background: $Light-Grayish-Cyan2;
+      color: $Desaturated-Dark-Cyan;
+      font-weight: 700;
+      padding: 10px;
+      border-radius: 5px;
+      transition: $t1;
+      cursor: pointer;
+
+      &:hover {
+        background: $Desaturated-Dark-Cyan;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.job-inner {
+  margin: 3rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.job-info {
+  position: relative;
+  .job-info-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .company-name {
+        color: $Desaturated-Dark-Cyan;
+        font-weight: 700;
+      }
+
+      .new-notifier {
+        @include notifier($Desaturated-Dark-Cyan);
+      }
+
+      .featured-notifier {
+        @include notifier($Very-Dark-Grayish-Cyan);
+      }
+    }
+
+    .job-title {
+      transition: $t1;
+      cursor: pointer;
+
+      &:hover {
+        color: $Desaturated-Dark-Cyan;
+        font-weight: 700;
+      }
+    }
+
+    .bottom {
+      color: $Dark-Grayish-Cyan;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      .cooperation-type {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        &::before,
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 0.25rem;
+          width: 0.25rem;
+          border-radius: 50%;
+          background: $Dark-Grayish-Cyan;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .desk-img {
+    display: block;
+  }
+  .mob-img {
+    display: none;
+  }
+
+  .job-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+  }
+
+  .job {
+    .tags {
+      border-top: none !important;
+      padding-top: 0;
+      width: 30%;
+    }
+  }
+
+  .job-info {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+    .job-info-inner {
+      .top .new-notifier {
+        padding: 0.3rem;
+      }
+
+      .job-title {
+        font-size: 1.25rem;
+      }
+
+      .bottom {
+        gap: 1rem;
+
+        .cooperation-type {
+          gap: 1rem;
+        }
+      }
+    }
+
+    > .company-avatar {
+      height: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 970px) {
+  .jobs-main-container {
+    width: 80%;
+  }
+  .job {
+    .tags {
+      width: 40%;
+    }
+  }
+}
+
+@media (min-width: 1270px) {
+  .job {
+    .tags {
+      width: auto;
+    }
+  }
+}

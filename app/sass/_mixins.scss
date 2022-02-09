@@ -1,0 +1,21 @@
+@mixin notifier($bg) {
+  display: none;
+  font-size: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: $bg;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  border-radius: 5rem;
+}
+
+@mixin skeleton($h, $w, $w-max, $b-r) {
+  height: $h;
+  width: $w;
+  max-width: $w-max;
+  border-radius: $b-r;
+  background: rgb(192, 192, 192);
+  animation: skeleton-anim 2s linear infinite alternate;
+  pointer-events: none;
+}

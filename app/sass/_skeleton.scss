@@ -1,0 +1,41 @@
+.skeleton-job {
+  > .company-avatar {
+    @include skeleton(4rem, 4rem, auto, 50%);
+  }
+  .job-info {
+    .company-avatar {
+      @include skeleton(6rem, 6rem, auto, 50%);
+    }
+    .job-info-inner {
+      .top {
+        @include skeleton(2rem, 40vw, 100px, 0.5rem);
+      }
+      .job-title {
+        @include skeleton(2rem, 60vw, 300px, 0.5rem);
+      }
+      .bottom {
+        align-items: center;
+        .rect {
+          @include skeleton(2rem, 20vw, 4rem, 0.5rem);
+        }
+        .circle {
+          @include skeleton(0.25rem, 0.25rem, auto, 50%);
+        }
+      }
+    }
+  }
+  .rects {
+    border-top: 1px solid rgb(192, 192, 192) !important;
+    width: auto !important;
+
+    .rect {
+      @include skeleton(2rem, 20vw, 4rem, 0.5rem);
+    }
+  }
+}
+
+@keyframes skeleton-anim {
+  to {
+    background: rgb(235, 235, 235);
+  }
+}
